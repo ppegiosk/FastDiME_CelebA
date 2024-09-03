@@ -217,7 +217,7 @@ def get_FastDiME_iterative_sampling(use_sampling=False):
         :param is_x_t_sampling: useful flag to distinguish when x_t is been generated
         :param guided_iterations: Early stop the guided iterations
         :param scale_grads: scale grads based on time dependant constant
-        :param dist_grad_kwargs: args for FastDiME algorithm
+        :param fast_dime_kwargs: args for FastDiME algorithm
         '''
 
         boolmask = None
@@ -361,7 +361,7 @@ def get_DiME_iterative_sampling(use_sampling=False):
         :param is_x_t_sampling: useful flag to distinguish when x_t is been generated
         :param guided_iterations: Early stop the guided iterations
         :param scale_grads: scale grads based on time dependant constant
-        :param dist_grad_kwargs: args for FastDiME algorithm
+        :param fast_dime_kwargs: args for FastDiME algorithm
         '''
 
         x_t = img.clone()
@@ -503,7 +503,7 @@ def get_GMD_iterative_sampling(use_sampling=False):
         :param is_x_t_sampling: useful flag to distinguish when x_t is been generated
         :param guided_iterations: Early stop the guided iterations
         :param scale_grads: scale grads based on time dependant constant
-        :param dist_grad_kwargs: args for FastDiME algorithm
+        :param fast_dime_kwargs: args for FastDiME algorithm
         '''
 
         boolmask = None 
@@ -649,6 +649,7 @@ def get_FastMaskDime2_iterative_sampling(use_sampling=False):
                       is_x_t_sampling=False,
                       guided_iterations=9999999,
                       boolmask=None,
+                      scale_grads=False,
                       fast_dime_kwargs=None):
 
         '''
@@ -671,6 +672,8 @@ def get_FastMaskDime2_iterative_sampling(use_sampling=False):
         :param x_t_sampling: use sampling when computing x_t
         :param is_x_t_sampling: useful flag to distinguish when x_t is been generated
         :param guided_iterations: Early stop the guided iterations
+        :param scale_grads: scale grads based on time dependant constant
+        :param fast_dime_kwargs: args for FastDiME algorithm
         '''
 
         boolmask = None
@@ -786,8 +789,9 @@ def get_FastDiMEnoMask_iterative_sampling(use_sampling=False):
                       x_t_sampling=True,
                       is_x_t_sampling=False,
                       guided_iterations=9999999,
+                      scale_grads=False,
                       fast_dime_kwargs=None,
-                      boolmask=None):
+        ):
 
         '''
         :param :
@@ -809,6 +813,8 @@ def get_FastDiMEnoMask_iterative_sampling(use_sampling=False):
         :param x_t_sampling: use sampling when computing x_t
         :param is_x_t_sampling: useful flag to distinguish when x_t is been generated
         :param guided_iterations: Early stop the guided iterations
+        :param scale_grads: scale grads based on time dependant constant
+        :param fast_dime_kwargs: args for FastDiME algorithm
         '''
 
         x_t = img.clone()

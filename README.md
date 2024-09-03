@@ -113,7 +113,7 @@ def get_FastDiME_iterative_sampling(use_sampling=False):
         :param is_x_t_sampling: useful flag to distinguish when x_t is been generated
         :param guided_iterations: Early stop the guided iterations
         :param scale_grads: scale grads based on time dependant constant
-        :param dist_grad_kwargs: args for FastDiME algorithm
+        :param fast_dime_kwargs: args for FastDiME algorithm
         '''
 
         boolmask = None
