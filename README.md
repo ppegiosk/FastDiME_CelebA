@@ -251,7 +251,7 @@ We follow [DiME](https://github.com/guillaumejs2403/DiME)'s and [ACE](https://gi
 - CD: `compute_CD.py`.
 - COUT: `compute_COUT.py`.
 - FID: `compute-fid.sh`.
-- FID: `compute_sFID.sh`.
+- sFID: `compute_sFID.sh`.
 
 
 ## Shortcut Learning Detection Pipeline
