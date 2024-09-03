@@ -12,7 +12,7 @@ C=1
 c=0
 
 # parameters of the dataset
-QUERYLABEL=31 # 31: 'smile', 30: 'age'
+QUERYLABEL=31 # 31: 'smile', 39: 'age'
 TARGETLABEL=-1
 IMAGESIZE=128
 
